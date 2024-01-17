@@ -17,4 +17,13 @@ Description:  "CodeSystem for Creating a beneficiary (MMT.A) Data Elements"
 * #DE10 "Residential Country Code" "Residential code that represents the beneficiary’s country of residence."
 * #DE11 "Residential County Code" "Residential code that represents the beneficiary’s county of residence"
 * #DE12 "Residential Location Code" "Residential code that represents the beneficiary’s location of residence."
+* #DE13 "MALE" 
+* #DE14 "FEMALE" 
+* #DE15 "OTHER" 
+* #DE16 "SINGLE" 
+* #DE17 "MARRIED" 
+* #DE18 "DIVORCED" 
+* #DE19 "WIDOWED" 
+
+
 
