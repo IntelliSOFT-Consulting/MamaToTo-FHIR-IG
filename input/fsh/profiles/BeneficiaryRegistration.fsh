@@ -14,13 +14,13 @@ Description: "An example profile of the Patient resource."
 * identifier.value 1..1 MS
 * name 1..1 MS
 * active MS
-* gender from genderVS
+// * gender from genderVS -> Use the default valueset provided by FHIR
 * birthDate MS
 * maritalStatus.coding.system 1..1 MS
 * maritalStatus.coding.code 1..1 MS 
 * maritalStatus from maritalStatusVS
 * telecom 0..* MS
-* telecom.use from $Contact_point_us_VS
+// * telecom.use from $Contact_point_us_VS -> telecom.use is a code, not a URL
 * telecom.system 1..1 MS
 * telecom.value 1..1 MS
 
@@ -29,15 +29,25 @@ Instance: BeneficiaryExample
 InstanceOf: BeneficiaryRegistry
 Usage: #example
 * identifier.type.coding.system = "http://example.org/beneficiary"
-* identifier.type.coding.code = #ID12345
+// * identifier.type.coding.code = #ID12345
+* identifier.type.coding.code = IDENTIFIERTYPES#DE1
 * identifier.value = #12453
 * active = true
 * name.text = "John Doe"
 * name.family = "Doe"
-* gender = #MALE
+* gender = #male
 * birthDate = "1980-06-03"
 * maritalStatus.coding.system = #http://example.org/CodeSystem/MMT.A
-* maritalStatus.coding.code = #SINGLE
+* maritalStatus.coding.code = #DE16
+* telecom.system = #phone
+* telecom.value = "555-1234"
+
+// * maritalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+// * maritalStatus.coding.code = "S"
+// * maritalStatus.coding.display = "Single"
+// * maritalStatus.text = "Single"
+
+
 // * telecom.use = #mobile
 // * telecom.system = "mobile"
 // * telecom.value = "+254736734344"
@@ -75,3 +85,4 @@ Description: "An example of a patient with a license to krill."
 * name
   * given[0] = "James"
   * family = "Pond"
+
