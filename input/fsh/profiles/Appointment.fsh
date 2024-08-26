@@ -25,4 +25,4 @@ Description: "AppointmentProfile"
 * participant.actor 0..1
 * participant.required 0..1
 * participant.status 1..1
-* participant.period 0..*
+* participant.period 0..1

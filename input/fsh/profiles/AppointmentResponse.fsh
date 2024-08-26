@@ -9,7 +9,7 @@ Description: "AppointmentResponseProfile"
 * appointment 1..1
 * start 0..1
 * end 0..1
-* particiantType 0..*
+* participantType 0..*
 * actor 0..1
-* particiantStatus 1..1
+* participantStatus 1..1
 * comment 0..1
