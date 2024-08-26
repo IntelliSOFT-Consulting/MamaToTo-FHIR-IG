@@ -11,9 +11,9 @@ Description: "ObservationProfile"
 * code 1..1
 * subject 0..1
 * subject only Reference(Patient)
-* effective 0..1
-* effective.effectiveDateTime
-* effective.effectivePeriod
+* effective[x] 0..1
+* effectiveDateTime 0..1
+* effectivePeriod 0..1
 * issued 0..1
 * value[x] 0..1
 * value[x].valueQuantity

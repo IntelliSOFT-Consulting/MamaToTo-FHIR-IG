@@ -14,6 +14,6 @@ Description: "PractitionerProfile"
 * birthDate 0..1
 * photo 0..1
 * qualification.identifier 0..1
-* qualification.code 0..1
+* qualification.code 1..1
 * qualification.period 0..1
 * qualification.issuer 0..1

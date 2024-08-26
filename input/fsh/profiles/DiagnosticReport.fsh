@@ -9,8 +9,8 @@ Description: "DiagnosticReport"
 * code 1..1
 * subject 0..1
 * encounter 0..1
-* effective 0..1
-* effective.effectiveDateTime 0..1
-* effective.effectivePeriod 0..1
-* perfomer 0..*
+* effective[x] 0..1
+* effectiveDateTime 0..1
+* effectivePeriod 0..1
+* performer 0..*
 * specimen 0..*
