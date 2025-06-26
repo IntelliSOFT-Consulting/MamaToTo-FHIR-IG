@@ -5,7 +5,7 @@ Alias: $Contact_point_us_VS = http://hl7.org/fhir/contact-point-use
 
 
 
-Profile: BeneficiaryRegistry
+Profile: PatientProfile
 Parent: Patient
 Description: "An example profile of the Patient resource."
 * identifier 0..* MS
@@ -25,8 +25,8 @@ Description: "An example profile of the Patient resource."
 * telecom.value 1..1 MS
 
 
-Instance: BeneficiaryExample
-InstanceOf: BeneficiaryRegistry
+Instance: PatientExample
+InstanceOf: PatientProfile
 Usage: #example
 * identifier.type.coding.system = "http://example.org/beneficiary"
 // * identifier.type.coding.code = #ID12345
@@ -41,48 +41,3 @@ Usage: #example
 * maritalStatus.coding.code = #DE16
 * telecom.system = #phone
 * telecom.value = "555-1234"
-
-// * maritalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-// * maritalStatus.coding.code = "S"
-// * maritalStatus.coding.display = "Single"
-// * maritalStatus.text = "Single"
-
-
-// * telecom.use = #mobile
-// * telecom.system = "mobile"
-// * telecom.value = "+254736734344"
-
-
-
-// Identifier:
-// - system: "http://example.org/beneficiary"
-//   value: "12345"
-// Name: "John Doe"
-// Active: true
-// Gender: #male
-// BirthDate: "1980-01-01"
-// MaritalStatus:
-//   system: "http://hl7.org/fhir/ValueSet/marital-status"
-//   code: "M"
-// Telecom:
-// - use: #home
-//   system: #phone
-//   value: "555-1234"
-// - use: #work
-//   system: #email
-//   value: "john.doe@example.com"
-
-
-
-
-
-
-
-
-Instance: PatientExample
-InstanceOf: BeneficiaryRegistry
-Description: "An example of a patient with a license to krill."
-* name
-  * given[0] = "James"
-  * family = "Pond"
-
