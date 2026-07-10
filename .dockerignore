@@ -1,0 +1,10 @@
+.git
+.gitignore
+output/
+temp/
+fsh-generated/
+input-cache/
+template/
+*.bat
+.DS_Store
+Thumbs.db
